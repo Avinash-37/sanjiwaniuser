@@ -1,3 +1,6 @@
+let webpack = require("webpack");
+
+
 module.exports = {
     target: "web",
     entry: [
@@ -20,10 +23,14 @@ module.exports = {
         rules: [
             {
                 //tell webpack to use jsx-loader for all *.jsx files
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                loader: "babel-loader",
-                
+                test: /\.(js|jsx)$/, 
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                      presets: ["react", "env"]
+                    }
+                  }
             },
             {
                 test: /\.css$/,
