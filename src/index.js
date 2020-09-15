@@ -29,6 +29,7 @@ import SanjiwaniMallHelp from './Component/sanjiwaniMallHelp';
 import Account from "./Component/userProfile";
 import UpdateProfile from "./Component/updateProfile";
 import OfferBanner from "./Component/offerBanner";
+import Search from "./Component/itemSearch";
 
 
 const routing = (
@@ -61,6 +62,7 @@ const routing = (
         <Route path="/account" component={Account}/>
         <Route path="/update-profile" component={UpdateProfile}/>
         <Route path="/offer-banner" component={OfferBanner}/>
+        <Route path="/search" component={Search}/>
         
       </div>
     </Router>
