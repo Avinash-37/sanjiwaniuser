@@ -100,6 +100,9 @@ Creation date: 13/09/2018 03:24
   .icon-search-map::before {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f689";
   }
+  .icon-close::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 400;content:"\f00d";
+  }
   .icon-star::before {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005";
   }

@@ -53,6 +53,7 @@ a {color: #ffffff;text-decoration: none;background-color: transparent;}
 .fontSize26{font-size: 26px !important;}
 .fontSize28{font-size: 28px !important;}
 .fontWeightBold{font-weight: 900 !important;}
+.titleBigBold{font-size: 14px;font-weight: 600;}
 .overFlowScroll{overflow: scroll;display: inline-flex;}
 .hide{display: none;}
 .hrLineAll{border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
@@ -74,7 +75,7 @@ hr.style-three:before {display: block;content: "";height: 30px;margin-top: -31px
 .success-div{color:#15ff00;font-size: 15px;padding:6px 0px 0px 0px;}
 .error-div{color:#ff0000;font-size: 0.9rem;padding:6px 0px 0px 0px;}
 .error-div-new{color:#ff0000;font-size: 0.9rem;padding:6px 0px 0px 0px;margin: auto;width: 80%;}
-.error-div-search{color:#ff0000;font-size: 0.9rem;padding:12px 0px 0px 16px;text-align: left;}
+.error-div-search{color:#ff0000;font-size: 0.9rem;padding:0px 0px 0px 16px;text-align: left;}
 .error-div-register{color:#ff0000;font-size: 0.9rem;padding:6px 10px 0px 10px;}
 .error-div-ForBlackBackground{color:#ffffff;font-size: 0.9rem;padding:6px 0px 0px 0px;margin: auto;width: 80%;}
 .error-divRight{color:#ff0000;font-size: 15px;padding:6px 0px 0px 0px;text-align: right;}
@@ -108,7 +109,7 @@ hr.style-three:before {display: block;content: "";height: 30px;margin-top: -31px
 .icon-pencile-edit{color: #f80404;font-size: 14px;padding: 0px 6px;}
 .iconBookingDropDown{color: #000000;font-size: 14px;right: 10%;position: absolute;}
 .iconLogout{color: #000000;font-size: 12px;}
-.iconSearch{color: #000000;font-size: 16px;}
+.iconSearch{color: #000000;font-size: 12px;}
 .iconWhite{color: #ffffff;font-size: 25px;}
 .iconWhiteCheck {color: #ffffff;font-size: 72px;}
 .bottomIcon{color: #aaaaaa;font-size: 22px;padding-bottom: 5px;}
@@ -350,18 +351,17 @@ textarea {resize: vertical;font-size: 1rem !important;line-height: 1 !important;
 /* ************* offer tag *************** */
 .vc{
   display: block;
-  width: 170px;
-  height: 24px;
+  width: 160px;
+  height: 20px;
   background-color: orange;
   transform: rotate(45deg);
   position: absolute;
   text-align: center;
-  line-height: 26px;
+  line-height: 22px;
   right: -60px;
-  top: 16px;
-  font-size: 15px;
+  top: 14px;
+  font-size: 10px;
 }
-
 
 
 
@@ -399,9 +399,9 @@ textarea {resize: vertical;font-size: 1rem !important;line-height: 1 !important;
 .menu-active-class{padding: 4px 0px 0px 0px;width: 80%;display: inline-block;border-bottom: 4px solid #64dd17;}
 .transparentBackground{background-color:transparent;}
 .boxShadow{background-color: #fbfbfb;box-shadow: 0px 0px 2px rgba(0, 0, 0, .5);}
-.announcement{display: inline-flex;padding: 10px;}
-.announcement-text{font-size: 4vw;letter-spacing: 1px;}
-.announcement-icon{padding: 5px 10px 0px 0px;display: inline-block;font-size: 20px;}
+.announcement{display: inline-flex;padding: 4px 0px;}
+.announcement-text{font-size: 10px;letter-spacing: 1px;margin-top: 5px;}
+.announcement-icon{padding: 2px 10px 0px 0px;display: inline-block;font-size: 18px;}
 
 .newsBannerIcon{padding: 0px 0px 0px 0px;display: inline-block;font-size: 4vw;}
 .newsBanner-text{font-size: 3vw;font-weight: 900;padding: 0px 10px;color: #64dd17;letter-spacing: 1px;}
@@ -1080,16 +1080,18 @@ input[type="checkbox"] + label {
   display: inline-block;
   right: 0.4em;
 }
-
 .dropdown-content {
   display: none;
   position: relative;
-  margin-top: 60px;
+  margin-top: 0px;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 110px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px;
+  box-shadow: 2px 8px 10px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px 0px 10px 0px;
 }
 
 .dropdown-content a {
@@ -1099,8 +1101,22 @@ input[type="checkbox"] + label {
   display: block;
 }
 
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .dropdown a:hover {background-color: #f1f1f1}
 
+.dropdownDotMenu {
+  position: absolute;
+  display: inline-block;
+  right: 1.1em;
+  margin-top: 4px;
+}
+
+.dropdownDotMenu:hover .dropdown-content {
+  display: block;
+}
 .show {display:block;}
 
 
@@ -1922,37 +1938,43 @@ input[type="checkbox"] + label {
     text-align: center;margin: 0px 23% 0px 35%;}
 
 /*************  Cart Service List End Here *****************/
+/************* Search Location Bar ******************/
+.searchLocationBar {height: 40px;background-color: transparent;padding: 0rem 10px;margin-top: 10px;}
 
-
+/************* Search Location Bar End Here ******************/
+/*********** Search Shop Button *************/
+.shopSearch {
+  width: 100%;
+  display: flex;
+  border: 1px solid #cccccc;
+  border-radius: 30px;
+}
+.shopSearchButton {
+    width: 14%;
+    height: 30px;
+    background: transparent;
+    text-align: center;
+    color: #cccccc;
+    cursor: pointer;
+    font-size: 20px;
+    /* border-left: 1px solid; */
+}
+.shopSearchTerm {
+    width: 88%;
+    height: 30px;
+    padding: 0px 0px 0px 4%;
+    outline: none;
+    color: #000000;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 30px;
+}
 .locationBar{
-	width: 100%;
 	height: 42px;
 	background-color: #ffffff;
 	padding: 0rem 0.4rem;
 	margin-top: 60px;
 }
-.search {
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-
-.searchTerm {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #aaa;
-  border-right: none;
-  padding: 16px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #000;
-  font-size: 14px;
-}
-
-.searchTerm:focus{
-  color: #000000;
-}
-
 .searchButton {
   width: 60px;
   height: 40px;
@@ -1967,6 +1989,37 @@ input[type="checkbox"] + label {
   font-size: 20px;
 }
 
+
+.locationBar{
+	width: 100%;
+	height: 42px;
+	background-color: #ffffff;
+	padding: 0rem 0.4rem;
+	margin-top: 60px;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.displayTooltip {
+  position: relative ;
+}
+/*************  Shop Service List End Here *****************/
+.productSearch{position: absolute;z-index: 999;width: 100%;height: auto;background-color: rgb(255 255 255 / 81%);padding: 0 0 4% 0;}
+.productSearchNane{position: absolute;z-index: 999;width: 100%;height: auto;background-color: rgb(0 0 0);padding: 0;}
+.shopServiceListSearch{padding: 3% 2% 0% 3%;
+  display: block;z-index: 999;}
+.shopServiceListDetailsSearch{
+      width: 95%;
+      height: auto;
+      border:1px solid #cbcaca;
+      background-color: #ffffff;
+      border-radius: 5px;
+      display: inline-flex;
+      padding: 0.6rem 0.4rem;
+      color: #000;
+  }
 /***** Resize the wrap to see the search bar change! ********/
 .wrap{
   width: 100%;

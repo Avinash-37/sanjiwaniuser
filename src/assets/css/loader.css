@@ -1097,8 +1097,8 @@
   height: 4em;
 }
 .roundSpinnerWithBox {
-  margin: 15% auto;
-  font-size: 8px;
+  margin: 10% auto;
+  font-size: 5px;
   position: relative;
   text-indent: -9999em;
   border-top: 0.9em solid rgba(0,0,0, 0.2);
@@ -1141,7 +1141,7 @@
 }
 .roundSpinnerWithBoxMarginZero {
   margin: 1% auto;
-  font-size: 8px;
+  font-size: 5px;
   position: relative;
   text-indent: -9999em;
   border-top: 0.5em solid rgba(0,0,0, 0.2);

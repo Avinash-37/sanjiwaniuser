@@ -371,14 +371,14 @@
     color: #ffffff;
     background-color: #52c234;
   }
-  .popMessageRatingOk{
-    padding: 6px 16px;
-    color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 6px;
-    background-color: #000000;
-    font-weight: 700;
-    letter-spacing: 1.4px;
+.popMessageRatingOk{
+  padding: 6px 16px;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  background-color: #000000;
+  font-weight: 700;
+  letter-spacing: 1.4px;
 }
 .popMessageRatingOk:hover{
     color: #000000;
@@ -459,10 +459,10 @@ input[type=checkbox] {
   border: 1px solid rgb(187, 187, 187);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
   padding: 5px;
-  top: 116.4px;
+  top: 110.4px;
   left: 4%;
 }
-.popup-content-location{
+.popup-content-search{
   position: absolute;
   z-index: 2;
   background: rgb(255, 255, 255);
