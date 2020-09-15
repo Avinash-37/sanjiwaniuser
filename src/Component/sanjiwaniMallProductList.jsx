@@ -163,8 +163,8 @@ const EmptyError = <div className="rowData">
                         </div>
                         <div className="divider-50"></div>
                         <div className="textCenter ">
-                            <Link to="/mall"><span className="linkColorYellow fontSize18">Find more product!</span>
-                            <div className="icon-right-arrow linkColorYellow divider-10"></div>
+                            <Link to="/mall"><span className="linkColorGreen fontSize18">Find more product!</span>
+                            <div className="icon-right-arrow linkColorGreen divider-10"></div>
                             </Link>
                         </div>
                   </div>
@@ -177,6 +177,7 @@ const ProductListAll = this.state.productList.map((item,index)=>
                              {/* <img src={process.env.REACT_APP_APECTOMALL_IMAGES_URL+item.images.frontView} alt="product_image"></img> */}
                              <img src={process.env.REACT_APP_APECTOMALL_IMAGES_URL + item.images.frontView} onError={(e)=>{e.target.onerror = null; e.target.src=NoProductImage}} alt="product_image" />
                      </div>
+                     {item.offer_percent===0?null:<div className="vc">{item.offer_percent}% Off</div>}
                      <div className="productText">
                              <div className="productTitle" onClick={()=>this.ProductDescription(item.product_id)}>{item.product_name}</div>
                          <div className="rowInner">
@@ -206,7 +207,7 @@ const ProductListAll = this.state.productList.map((item,index)=>
 
                 <div className="rowData">
                     <div className="rowInnerMall">
-                                {this.state.transparentLoader?<TransparentLoader/>:this.state.emptyProductListError? EmptyError:ProductListAll}
+                            {this.state.transparentLoader?<TransparentLoader/>:this.state.emptyProductListError? EmptyError:ProductListAll}
                        </div>
                 </div>
                 {this.state.productAddedinCart ? (

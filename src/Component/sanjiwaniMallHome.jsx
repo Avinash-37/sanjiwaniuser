@@ -6,6 +6,7 @@ import BottomMenu from './bottomMenu';
 import BestDeal from "./sanjiwaniMallBestDeals";
 import Announcement from "./deliveryAnnouncement";
 import ApectoMallCurrentOrderView from './sanjiwaniMallCurrentOrderView';
+import SearchItem from "./itemSearch";
 class SanjiwaniMallHome extends Component {
     constructor(props) {
         super(props);
@@ -18,6 +19,7 @@ class SanjiwaniMallHome extends Component {
     render() {
         return (
             <>
+                <SearchItem/>
                <AdvertizeBanner/>
                {/* <div className="divider-20"></div>
                <AllCategory/>  */}

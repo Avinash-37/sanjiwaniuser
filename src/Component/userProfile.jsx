@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import TopBarWithoutBack from "./topBar";
 import TransparentLoader from "./transparentLoader";
 import ShareIconPopup from "./ShareIconPopup";
-import Loader from "./loader";
+//import Loader from "./loader";
 import EmptyLogin from "./emptyLogin";
 import ToManyError from "./ToManyError";
 import profile from "../assets/images/shop_image.jpg";
@@ -91,9 +91,7 @@ class UserProfile extends Component {
       }
     
     render() {
-        if(this.state.loaded === true){
-            return (<Loader />);
-        }else if (localStorage.getItem('mobileNumber') === null) {
+        if (localStorage.getItem('mobileNumber') === null) {
             return (<EmptyLogin />);
         }else if(this.state.loadError === true){
             return (<ToManyError redirectURL = {"/account"}/>);

@@ -34,12 +34,13 @@ class SanjiwaniMallBestDeals extends Component {
     
     UNSAFE_componentWillMount(){
        this.getProductList();
+       localStorage.setItem("activeMenu","Home");
     }
     
     getProductList(){
     let currentComponent = this;
         axios
-        .get(process.env.REACT_APP_APECTOMALL_BACKEND_IP +"product/products/"+localStorage.getItem('shopIdLocal')+"?cat=women")
+        .get(process.env.REACT_APP_APECTOMALL_BACKEND_IP +"product/products/"+localStorage.getItem('shopIdLocal'))
         .then(function(response) { 
           console.log("product list"+response.data.payload);
           if(response.data.error !== null){
@@ -107,9 +108,9 @@ class SanjiwaniMallBestDeals extends Component {
                             <ProductLike productId={item.product_id}shopId={localStorage.getItem('shopIdLocal')}favProduct={item.favProduct}/>
                                 <div className="productImage" onClick={()=>this.ProductDescription(item.product_id)}>
                                 {/* <img src={img1} alt="product_image"></img> */}
-                      <img src={process.env.REACT_APP_APECTOMALL_IMAGES_URL + item.images.frontView} onError={(e)=>{e.target.onerror = null; e.target.src=NoProductImage}} alt="product_image" />
+                                <img src={process.env.REACT_APP_APECTOMALL_IMAGES_URL + item.images.frontView} onError={(e)=>{e.target.onerror = null; e.target.src=NoProductImage}} alt="product_image" />
                             </div>
-                            <div className="vc">{item.offer_percent}% Off</div>
+                            {item.offer_percent===0?null:<div className="vc">{item.offer_percent}% Off</div>}
                             <div className="productText">
                               <div className="productTitle" onClick={()=>this.ProductDescription(item.product_id)}>{item.product_name}</div>
                                 <div className="rowInner">

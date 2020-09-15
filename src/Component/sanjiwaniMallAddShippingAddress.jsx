@@ -3,7 +3,7 @@ import axios from "axios";
 // import ShopNameTopBar from "./topBarBackButton";
 import ProductBar from "./sanjiwaniMallPLBar";
 import {Redirect} from "react-router-dom";
-import logo from '../assets/images/Logo.png'; 
+//import logo from '../assets/images/Logo.png'; 
 
 class SanjiwaniMallAddShippingAddress extends Component {
     constructor(props) {
@@ -35,7 +35,7 @@ class SanjiwaniMallAddShippingAddress extends Component {
             <div className="form-box">
                 <div className="rowData ">
                     <div className="newAddress-logo">
-                    <img src={logo} height="40" alt="logo" />
+                    <div className="title bold"> Sanjiwani</div>
                     </div>
                 </div>
                 <div className="login-form">
