@@ -43,7 +43,7 @@ class SanjiwaniMallProductList extends Component {
         }
      }
      
-getAllProductList(){
+  getAllProductList(){
         let currentComponent = this;
             axios
             .get(process.env.REACT_APP_APECTOMALL_BACKEND_IP +"product/products/"+localStorage.getItem('shopIdLocal'))
@@ -77,7 +77,7 @@ getAllProductList(){
                         let ProductList=[];
                         for (let i=0; i<count; i++) {
                             ProductList.push(response.data.payload[i]);
-                            console.log("Shop product Information"+response.data.payload[i]);
+                            //console.log("Shop product Information"+response.data.payload[i]);
                         }
                           currentComponent.setState({
                             productList:ProductList,
@@ -92,8 +92,8 @@ getAllProductList(){
               console.log(error);
             });
         }
-
-getProductList(){
+  
+  getProductList(){
      let currentComponent = this;
          axios
          .get(process.env.REACT_APP_APECTOMALL_BACKEND_IP +"product/products/"+localStorage.getItem('shopIdLocal')+"?cat="+localStorage.getItem("CategoryName"))
@@ -126,7 +126,7 @@ getProductList(){
                      let ProductList=[];
                      for (let i=0; i<count; i++) {
                          ProductList.push(response.data.payload[i]);
-                         console.log("Shop product Information"+response.data.payload[i]);
+                         //console.log("Shop product Information"+response.data.payload[i]);
                      }
                        currentComponent.setState({
                          productList:ProductList,
@@ -141,14 +141,65 @@ getProductList(){
            console.log(error);
          });
      }
-    
-     ProductDescription(productid){
+
+  ProductDescription(productid){
       localStorage.setItem("description-product-id",productid);
       this.setState({
         description:true,
       })
     }
 
+  changeSort(value){
+      console.log("check Category",value);
+      localStorage.setItem("CategoryName",value);
+      this.setState({transparentLoader:true})
+      let currentComponent = this;
+         axios
+         .get(process.env.REACT_APP_APECTOMALL_BACKEND_IP +"product/products/"+localStorage.getItem('shopIdLocal')+"?cat="+value)
+         .then(function(response) { 
+           //console.log("product list"+response.data.payload);
+           if(response.data.error !== null){
+             if(response.data.error.errorName === "NO_PRODUCT_FOUND"){
+                 currentComponent.setState({
+                   loadError:false,
+                   emptyProductListError:true,
+                   transparentLoader:false,
+ 
+                 });
+                 console.log("No product available");          
+               }else{
+                 currentComponent.setState({
+                   transparentLoader:false,
+                 });
+                 console.log("To Many Error In Shop product list ");
+               }
+
+           }else if (response.data.status.statusCode === 200) {
+             const count=response.data.payload.length;
+                 if(count <= 0){
+                     currentComponent.setState({
+                         emptyProductListError:true,
+                         transparentLoader:false,
+                     });
+                 }else{
+                     let ProductList=[];
+                     for (let i=0; i<count; i++) {
+                         ProductList.push(response.data.payload[i]);
+                         //console.log("Shop product Information"+response.data.payload[i]);
+                     }
+                       currentComponent.setState({
+                         productList:ProductList,
+                           emptyProductListError:false,
+                           transparentLoader:false,
+                       });
+                 }
+               console.log("Shop product Information");
+           }  
+         })
+         .catch(function(error) {
+           console.log(error);
+         });
+    }
     render() {
         if (this.state.description === true) {
               return <Redirect to = '/description' />
@@ -202,7 +253,7 @@ const ProductListAll = this.state.productList.map((item,index)=>
 
         return (
             <>
-               <ProductBar productTitle={localStorage.getItem("CategoryName")===""?"All product":localStorage.getItem("CategoryName")}backUrl={"mall"} search={true}/> 
+               <ProductBar productTitle={localStorage.getItem("CategoryName")===""?"All product":localStorage.getItem("CategoryName")}backUrl={"mall"} search={{"TRUE":true,sort:this.changeSort.bind(this)}}/> 
                <div className="divider-50"></div>
 
                 <div className="rowData">

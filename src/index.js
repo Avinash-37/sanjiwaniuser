@@ -30,6 +30,13 @@ import Account from "./Component/userProfile";
 import UpdateProfile from "./Component/updateProfile";
 import OfferBanner from "./Component/offerBanner";
 import Search from "./Component/itemSearch";
+import Admin from "./Component/Admin/home-admin";
+import AddProduct from "./Component/Admin/addProduct";
+import Product from "./Component/Admin/product";
+import Offer from "./Component/Admin/offers";
+import AdminProfile from "./Component/Admin/adminProfile";
+import ViewUpdateProduct from "./Component/Admin/viewUpdateProduct";
+import ViewDeleteProduct from "./Component/Admin/viewDeleteProduct";
 
 
 const routing = (
@@ -63,6 +70,13 @@ const routing = (
         <Route path="/update-profile" component={UpdateProfile}/>
         <Route path="/offer-banner" component={OfferBanner}/>
         <Route path="/search" component={Search}/>
+        <Route path="/admin" component={Admin}/>
+        <Route path="/add-product" component={AddProduct}/>
+        <Route path="/product-add" component={Product}/>
+        <Route path="/offer" component={Offer}/>
+        <Route path="/admin-profile" component={AdminProfile}/>
+        <Route path="/viewUpdateProduct" component={ViewUpdateProduct}/>
+        <Route path="/viewDeleteProduct" component={ViewDeleteProduct}/>
         
       </div>
     </Router>

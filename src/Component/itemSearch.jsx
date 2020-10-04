@@ -38,7 +38,6 @@ class ItemSearch extends Component {
         })
       }
 UNSAFE_componentWillMount(){
-  localStorage.setItem("activeMenu","Search");
     this.setState({
       showTooltipMessage:true,
     });

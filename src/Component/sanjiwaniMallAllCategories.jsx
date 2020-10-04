@@ -20,6 +20,9 @@ class SanjiwaniMallAllCategories extends Component {
     
     UNSAFE_componentWillMount(){
         localStorage.setItem("activeMenu","Menu");
+        this.setState({
+            categoryName:false,
+        })
     }
 
     render() {

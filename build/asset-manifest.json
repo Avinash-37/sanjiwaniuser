@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e0f2b167.chunk.css",
+    "main.js": "./static/js/main.732a074a.chunk.js",
+    "main.js.map": "./static/js/main.732a074a.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
+    "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
+    "static/css/2.1c164e0d.chunk.css": "./static/css/2.1c164e0d.chunk.css",
+    "static/js/2.9df26720.chunk.js": "./static/js/2.9df26720.chunk.js",
+    "static/js/2.9df26720.chunk.js.map": "./static/js/2.9df26720.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.cf3688d273e274f498077fd7d0fb43cf.js": "./precache-manifest.cf3688d273e274f498077fd7d0fb43cf.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.1c164e0d.chunk.css.map": "./static/css/2.1c164e0d.chunk.css.map",
+    "static/css/main.e0f2b167.chunk.css.map": "./static/css/main.e0f2b167.chunk.css.map",
+    "static/media/fonts.css": "./static/media/fa-solid-900.ea363ed4.eot",
+    "static/media/Logo.png": "./static/media/Logo.f593d31d.png",
+    "static/media/main.css": "./static/media/Poppins-Regular.41e8dead.ttf",
+    "static/media/diwali.jpg": "./static/media/diwali.ee538aa3.jpg",
+    "static/media/hotel.webp": "./static/media/hotel.6c1a2f26.webp",
+    "static/media/innerBanner1.jfif": "./static/media/innerBanner1.8fe180af.jfif",
+    "static/media/innerBanner2.jfif": "./static/media/innerBanner2.f87db3f4.jfif",
+    "static/media/innerBanner3.jfif": "./static/media/innerBanner3.14843f16.jfif",
+    "static/media/innerBanner4.jfif": "./static/media/innerBanner4.5312f5ae.jfif",
+    "static/media/style.css": "./static/media/mens.c5fcd831.jpg",
+    "static/media/shopOffer2.png": "./static/media/shopOffer2.7fd1cdbb.png",
+    "static/media/shop_image.jpg": "./static/media/shop_image.a50054f2.jpg",
+    "static/media/tickMarkGreen.png": "./static/media/tickMarkGreen.d5860eea.png",
+    "static/media/vegetable.jpg": "./static/media/vegetable.ca4703e5.jpg"
+  }
+}
